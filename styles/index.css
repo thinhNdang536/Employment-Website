@@ -1,0 +1,85 @@
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+
+html {
+    scrollbar-width: thin; /* Set scrollbar width to thin */
+    scrollbar-color: #555555 transparent; /* Thumb color: #4caf50, Track color: #f1f1f1 */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-item {
+    display: flex;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 5px;
+    transition:0.3s ease-in-out;
+    width: 115px;
+    flex-direction: column;
+}
+
+.nav-item:hover {
+    color: #ffffff;
+    background-color: #007bff;
+    
+    scale: 1.1;
+}
+
+.nav-item p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 100%;
+    font-family:Righteous, sans-serif;
+    transition:0.3s ease-in-out;
+}
+
+.nav-item p[name=main] {
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav-item p[name=sub] {
+    opacity: 0;
+    position: relative;
+    font-size: 10px;
+    transform: translateY(30px);
+    transition:0.3s ease-in-out;
+}
+
+.nav-item:hover p[name=main] {
+    transform:translateY(-10px);
+}
+
+.nav-item:hover p[name=sub] {
+    position: relative;
+    opacity: 1;
+    transform: translateY(7px);
+}
+
+.footer-menu {
+    margin-left: auto;
+    margin-right: 200px;
+}
+
+.footer-menu li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+
+  .footer-menu li:hover a{
+    color: #ff5e14;
+  }
+  .footer-menu li a {
+    font-size: 14px;
+    color: #878787;
+  }
+
+  .footer-menu li a:link {
+    text-decoration: underline;
+  }
