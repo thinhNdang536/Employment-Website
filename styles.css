@@ -1,0 +1,120 @@
+@keyframes backInFromLeft {
+    0% {
+        transform: translateX(-100%); 
+        opacity: 0; 
+    }
+    60% {
+        transform: translateX(10%); 
+        opacity: 1; 
+    }
+    100% {
+        transform: translateX(0); 
+        opacity: 1;
+    }
+}
+
+@keyframes backInFromRight {
+    0% {
+        transform: translateX(100%); 
+        opacity: 0; 
+    }
+    60% {
+        transform: translateX(-10%); 
+        opacity: 1; 
+    }
+    100% {
+        transform: translateX(0); 
+        opacity: 1; 
+    }
+}
+
+body {
+    background-color: #28282B	;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    color: #f4f4f4;
+    position: relative;
+    cursor: pointer;
+    margin: 100px auto;
+}
+h1::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 2px;
+    width: 10%;
+    left: 50%;
+    margin-left: -5%;
+    background-color: #f4f4f4;
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+    transform: scaleX(0);
+}
+h1:hover::after {
+    transform: scaleX(1);
+}
+body, h1, h2, p, ul {
+    margin: 20px;
+    padding: 0;
+}
+h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin: 20px 0 10px;
+}
+.makerting-manager {
+    border-radius: 8px;
+    margin: 0 60px;
+}
+.business-analyst {
+    border-radius: 8px;
+    margin: 0 60px;
+}
+.software-engineer{
+    border-radius: 8px;
+    margin: 0 60px;
+}
+
+.job-listing {
+    display: flex;
+    align-items: center;
+    background: #f4f4f4;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+
+.left-align {
+    flex-direction: row;
+    opacity: 0; 
+            transform: translateX(-100%); 
+            animation: backInFromLeft 0.5s forwards; 
+}
+
+.right-align {
+    flex-direction: row-reverse;
+    opacity: 0; 
+            transform: translateX(100%); 
+            animation: backInFromRight 0.5s forwards; 
+}
+
+button {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 1s;
+    }
+    button:hover {
+        background-color: #1a5175;
+    }
+
+        
+  
